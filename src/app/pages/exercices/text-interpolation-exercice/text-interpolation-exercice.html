@@ -1,0 +1,37 @@
+<div class="max-w-5xl mx-auto my-10 space-y-8 p-4">
+    <div class="text-center space-y-2">
+        <h1 class="text-4xl font-extrabold text-primary">{{ title }}</h1>
+        <p class="text-base-content/70 text-lg">{{ description }}</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="card shadow-xl border border-base-300">
+        <div class="card-body">
+            <h2 class="card-title">1. Types primitifs</h2>
+            <div class="divider"></div>
+            <p>Note maximale : <span class="badge badge-neutral">{{ maxScore }}/{{ maxScore }}</span></p>
+            <p>Score actuel : <span class="badge badge-primary">{{ currentScore }}/{{ maxScore }}</span></p>
+            <p>Pourcentage : {{ (currentScore / maxScore) * 100 }}%.</p>
+        </div>
+    </div>
+
+    <div class="card shadow-xl border border-base-300">
+        <div class="card-body">
+            <h2 class="card-title">2. Objet & Méthode</h2>
+            <div class="divider"></div>
+            <p>Rôle : {{ user.role }}</p>
+            <p>Nom complet : {{ getFullName() }}.</p>
+            <p>Statut : {{ isLoggedIn ? 'Connecté' : 'Déconnecté' }}.</p>
+        </div>
+    </div>
+
+    <div class="card shadow-xl border border-base-300">
+        <div class="card-body">
+            <h2 class="card-title">3. Tableaux</h2>
+            <div class="divider"></div>
+            <p>Première compétence : {{ skills[0] }}.</p>
+            <p>Toutes les compétences : {{ skills.join(' • ') }}.</p>
+        </div>
+    </div>
+</div>
