@@ -1,3 +1,23 @@
 <div class="text-center space-y-2">
     <h1 class="text-4xl font-extrabold text-primary">{{ title }}</h1>
 </div>
+
+<form class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4" action="">
+    <input [(ngModel)]="inputNameFriend" class="input" type="text" name="friendName" id="" placeholder="Nom du pote">
+    <button (click)="addAFriend()" class="btn btn-primary">Ajouter un pote</button>
+</form>
+
+@for (item of userProfiles; track item.id) {
+    <div class="card bg-base-100 w-96 shadow-sm">
+        <figure>
+          <img src="https://picsum.photos/200" [alt]="item.firstName" />
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">{{ item.firstName }} {{ item.lastName }}</h2>
+            <p>Role: {{ item.role }}</p>
+            <p>Email: {{ item.email }}</p>
+            <p>{{ item.isActive?"Online":"Offline" }}</p>
+            <p>id: {{ item.id }}</p>
+        </div>
+    </div>
+}
