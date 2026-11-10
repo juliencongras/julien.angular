@@ -46,6 +46,10 @@ export const routes: Routes = [
     path: 'exercices/property_binding',
     loadComponent: () => import('./pages/exercices/property-binding-exercice/property-binding-exercice').then((m) => m.PropertyBindingExercice),
   },
+  {
+    path: 'exercices/event_binding',
+    loadComponent: () => import('./pages/exercices/event-binding-exercice/event-binding-exercice').then((m) => m.EventBindingExercice),
+  },
 
   //Corrections
     {
