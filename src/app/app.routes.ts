@@ -23,6 +23,10 @@ export const routes: Routes = [
         path: 'lessons/attributes_binding',
         loadComponent: () => import('./pages/lessons/attributes-binding-lesson/attributes-binding-lesson').then((m) => m.AttributesBindingLesson),
     },
+    {
+        path: 'lessons/event_binding',
+        loadComponent: () => import('./pages/lessons/event-binding-lesson/event-binding-lesson').then((m) => m.EventBindingLesson),
+    },
 
   //Exercices
   {
