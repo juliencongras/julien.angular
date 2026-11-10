@@ -23,7 +23,7 @@ export class PropertyBindingExercice {
     name: "Steven Cigale",
     age: 25,
     status: false,
-    bio: "Steven Cigale is a franch film producer, screenwriter, and director. He is best known for his work in the 2000s and 2010s.",
+    bio: "Steven Cigale is a french film producer, screenwriter, and director. He is best known for his work in the 2000s and 2010s.",
     imgurl: "https://picsum.photos/300/200"
   }
 

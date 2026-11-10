@@ -39,4 +39,8 @@ export const routes: Routes = [
         path: 'corrections/text_interpolation',
         loadComponent: () => import('./pages/corrections/text-interpolation-correction/text-interpolation-exercice').then((m) => m.TextInterpolationExercice),
     },
+    {
+        path: 'corrections/attributes_binding',
+        loadComponent: () => import('./pages/corrections/attributes-binding-correction/attributes-binding-correction').then((m) => m.AttributesBindingCorrection),
+    },
 ];
