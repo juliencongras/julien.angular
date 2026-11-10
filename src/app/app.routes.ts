@@ -31,6 +31,11 @@ export const routes: Routes = [
         path: 'lessons/two_way_binding',
         loadComponent: () => import('./pages/lessons/two-way-binding-lesson/two-way-binding-lesson').then((m) => m.TwoWayBindingLesson),
     },
+    {
+        path: 'lessons/conditional_rendering',
+        loadComponent: () => import('./pages/lessons/conditional-rendering-lesson/conditional-rendering-lesson').then((m) => m.ConditionalRenderingLesson),
+    },
+
 
   //Exercices
   {
