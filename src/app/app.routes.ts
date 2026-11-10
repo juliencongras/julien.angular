@@ -50,6 +50,10 @@ export const routes: Routes = [
     path: 'exercices/event_binding',
     loadComponent: () => import('./pages/exercices/event-binding-exercice/event-binding-exercice').then((m) => m.EventBindingExercice),
   },
+  {
+    path: 'exercices/conditional_rendering',
+    loadComponent: () => import('./pages/exercices/conditional-rendering-exercice/conditional-rendering-exercice').then((m) => m.ConditionalRenderingExercice),
+  },
 
   //Corrections
     {

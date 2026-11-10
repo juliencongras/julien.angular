@@ -1,0 +1,8 @@
+<div class="text-center space-y-2">
+    <h1 class="text-4xl font-extrabold text-primary">{{ title }}</h1>
+</div>
+
+<p>Nom de l'ami</p>
+<input (input)="onUpdateFriendsList($event)" type="text" placeholder="Entrer le nom d'un ami" class="input" />
+<p>{{ listFriendsCreationStatus }}</p>
+<button (click)="onAddingFriends()" [disabled]="listFriendsAuth" class="btn">Ajouter un ami</button>

@@ -12,7 +12,6 @@ interface Friend {
 @Component({
   imports: [],
   selector: 'app-property-binding-exercice',
-  styleUrl: './property-binding-exercice.css',
   templateUrl: './property-binding-exercice.html',
 })
 export class PropertyBindingExercice {
