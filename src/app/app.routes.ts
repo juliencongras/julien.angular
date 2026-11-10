@@ -51,4 +51,12 @@ export const routes: Routes = [
         path: 'corrections/attributes_binding',
         loadComponent: () => import('./pages/corrections/attributes-binding-correction/attributes-binding-correction').then((m) => m.AttributesBindingCorrection),
     },
+
+  //! ---------- Le système page Not Found ---------------------------------------------------------------------
+  // Dans Angular il faut placer à la fin le path:'**'
+  // ! check la doc si ya meilleure manière de faire ou plus simple ? aller explorer analog ?
+    {
+      path:'**',
+      loadComponent:()=>import('./pages/not-found/not-found').then(m=>m.NotFound)
+    }
 ];
