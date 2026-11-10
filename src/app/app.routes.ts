@@ -54,6 +54,11 @@ export const routes: Routes = [
     path: 'exercices/conditional_rendering',
     loadComponent: () => import('./pages/exercices/conditional-rendering-exercice/conditional-rendering-exercice').then((m) => m.ConditionalRenderingExercice),
   },
+  {
+    path: 'exercices/two_way_databinding',
+    loadComponent: () => import('./pages/exercices/two-way-databinding-exercice/two-way-databinding-exercice').then((m) => m.TwoWayDatabindingExercice
+  ),
+  },
 
   //Corrections
     {
