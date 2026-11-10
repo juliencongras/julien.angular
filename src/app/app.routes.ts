@@ -15,10 +15,10 @@ export const routes: Routes = [
   },
 
   //Lessons
-  {
-    path: 'lessons/text_interpolation',
-    loadComponent: () => import('./pages/lessons/text-interpolation-lesson/text-interpolation-lesson').then((m) => m.TextInterpolationLesson),
-  },
+    {
+      path: 'lessons/text_interpolation',
+      loadComponent: () => import('./pages/lessons/text-interpolation-lesson/text-interpolation-lesson').then((m) => m.TextInterpolationLesson),
+    },
     {
         path: 'lessons/attributes_binding',
         loadComponent: () => import('./pages/lessons/attributes-binding-lesson/attributes-binding-lesson').then((m) => m.AttributesBindingLesson),
@@ -28,6 +28,10 @@ export const routes: Routes = [
   {
     path: 'exercices/text_interpolation',
     loadComponent: () => import('./pages/exercices/text-interpolation-exercice/text-interpolation-exercice').then((m) => m.TextInterpolationExercice),
+  },
+  {
+    path: 'exercices/property_binding',
+    loadComponent: () => import('./pages/exercices/property-binding-exercice/property-binding-exercice').then((m) => m.PropertyBindingExercice),
   },
 
   //Corrections

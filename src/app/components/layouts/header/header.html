@@ -1,21 +1,39 @@
-<div class="bg-gray-800 text-white p-4">
-  <nav>
-    <ul>
-      <li><a routerLink="/home">Lien Vers Home</a></li>
-      <li><a routerLink="/about">Lien Vers About</a></li>
+<div class="navbar bg-base-100 shadow-sm z-1">
+  <a class="btn btn-ghost text-xl">Julien.angular</a>
+  <a routerLink="/home" class="btn btn-ghost">Home</a>
+  <a routerLink="/about" class="btn btn-ghost">About</a>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal px-1">
+      <li>
+        <details>
+          <summary>Leçons</summary>
+          <ul class="bg-base-100 rounded-t-none p-2 overflow-y-auto max-h-60">
+            <li><a routerLink="/lessons/text_interpolation">Text interpolation</a></li>
+            <li><a routerLink="/lessons/attributes_binding">Attributes binding</a></li>
+          </ul>
+        </details>
+      </li>
     </ul>
-    <ul>
-        Lessons
-      <li><a routerLink="/lessons/text_interpolation">Text interpolation</a></li>
-      <li><a routerLink="/lessons/attributes_binding">Attributes binding</a></li>
+    <ul class="menu menu-horizontal px-1">
+      <li>
+        <details>
+          <summary>Exercices</summary>
+          <ul class="bg-base-100 rounded-t-none p-2 overflow-y-auto max-h-60">
+            <li><a routerLink="/exercices/text_interpolation">Text interpolation</a></li>
+            <li><a routerLink="/exercices/property_binding">Property binding</a></li>
+          </ul>
+        </details>
+      </li>
     </ul>
-    <ul>
-        Exercices
-      <li><a routerLink="/exercices/text_interpolation">Text interpolation</a></li>
+    <ul class="menu menu-horizontal px-1">
+      <li>
+        <details>
+          <summary>Corrections</summary>
+          <ul class="bg-base-100 rounded-t-none p-2 overflow-y-auto max-h-60">
+            <li><a routerLink="/corrections/text_interpolation">Text interpolation</a></li>
+          </ul>
+        </details>
+      </li>
     </ul>
-    <ul>
-        Corrections
-      <li><a routerLink="/corrections/text_interpolation">Text interpolation</a></li>
-    </ul>
-  </nav>
+  </div>
 </div>

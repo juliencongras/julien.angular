@@ -1,0 +1,16 @@
+<div class="text-center space-y-2">
+    <h1 class="text-4xl font-extrabold text-primary">{{ title }}</h1>
+</div>
+
+<div class="card bg-base-100 w-96 shadow-sm">
+    <figure>
+      <img [src]="oneFriend.imgurl" [alt]="oneFriend.name" />
+    </figure>
+    <div class="card-body">
+        <h2 class="card-title">{{ oneFriend.name }}</h2>
+        <p>Status: {{ getOneFriendStatus()?"Online":"Offline" }}</p>
+        <p>Age: {{ oneFriend.age }}</p>
+        <p>Bio: {{ oneFriend.bio }}</p>
+        <p>Réputation: {{ getOneFriendStatus()?"Cool":"Ringard" }}</p>
+    </div>
+</div>
