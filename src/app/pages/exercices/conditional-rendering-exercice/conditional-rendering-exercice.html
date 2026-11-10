@@ -3,6 +3,11 @@
 </div>
 
 <p>Nom de l'ami</p>
-<input (input)="onUpdateFriendsList($event)" type="text" placeholder="Entrer le nom d'un ami" class="input" />
-<p>{{ listFriendsCreationStatus }}</p>
+<input type="text" placeholder="Entrer le nom d'un ami" class="input" />
+<p>{{ listFriendsInputText }}</p>
+@if (listFriendsAuth) {
+  <p>🥳🥳🥳 Votre ami a été ajouté !</p>
+} @else {
+  <p>🥶🥶🥶 Aucun ami ...</p>
+}
 <button (click)="onAddingFriends()" [disabled]="listFriendsAuth" class="btn">Ajouter un ami</button>
