@@ -1,3 +1,35 @@
 <div class="text-center space-y-2">
     <h1 class="text-4xl font-extrabold text-primary">{{ title }}</h1>
 </div>
+
+<div class="card bg-base-100 w-96 shadow-sm">
+    <figure>
+      <img [src]="oneFriend.friendImgUrl" [alt]="oneFriend.friendName" />
+    </figure>
+    <div class="card-body">
+        <h2 class="card-title">{{ oneFriend.friendName }}</h2>
+        <p>Status: {{ oneFriend.getOneFriendStatus() }}</p>
+        <p>Age: {{ oneFriend.friendAge }}</p>
+        <p>Bio: {{ oneFriend.friendBio }}</p>
+        <p>Réputation: {{ oneFriend.getOneFriendStatus() }}</p>
+    </div>
+</div>
+
+<form class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+    <h2>Modifier les informations de {{ oneFriend.friendName }}</h2>
+
+  <label class="label">Nom</label>
+  <input [(ngModel)]="oneFriend.friendName" class="input" name="friendName" placeholder="Nom" />
+
+  <label class="label">Age</label>
+  <input [(ngModel)]="oneFriend.friendAge" class="input" name="friendAge" placeholder="Age" />
+
+  <label class="label">Status</label>
+  <input [(ngModel)]="oneFriend.friendStatus" class="input" name="friendStatus" placeholder="Status" />
+
+  <label class="label">Bio</label>
+  <textarea [(ngModel)]="oneFriend.friendBio" class="input" name="friendBio" id="" placeholder="Bio"></textarea>
+
+  <label class="label">Image (URL)</label>
+  <input [(ngModel)]="oneFriend.friendImgUrl" class="input" name="friendImgUrl" placeholder="Image (URL)" />
+</form>
