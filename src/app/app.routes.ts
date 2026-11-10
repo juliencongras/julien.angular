@@ -56,8 +56,11 @@ export const routes: Routes = [
   },
   {
     path: 'exercices/two_way_databinding',
-    loadComponent: () => import('./pages/exercices/two-way-databinding-exercice/two-way-databinding-exercice').then((m) => m.TwoWayDatabindingExercice
-  ),
+    loadComponent: () => import('./pages/exercices/two-way-databinding-exercice/two-way-databinding-exercice').then((m) => m.TwoWayDatabindingExercice),
+  },
+  {
+    path: 'exercices/list_rendering',
+    loadComponent: () => import('./pages/exercices/list-rendering-exercice/list-rendering-exercice').then((m) => m.ListRenderingExercice),
   },
 
   //Corrections
