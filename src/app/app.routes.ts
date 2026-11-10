@@ -27,6 +27,10 @@ export const routes: Routes = [
         path: 'lessons/event_binding',
         loadComponent: () => import('./pages/lessons/event-binding-lesson/event-binding-lesson').then((m) => m.EventBindingLesson),
     },
+    {
+        path: 'lessons/two_way_binding',
+        loadComponent: () => import('./pages/lessons/two-way-binding-lesson/two-way-binding-lesson').then((m) => m.TwoWayBindingLesson),
+    },
 
   //Exercices
   {
