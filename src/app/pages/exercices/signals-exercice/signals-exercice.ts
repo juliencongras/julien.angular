@@ -11,7 +11,7 @@ export class SignalsExercice {
 
   quantity = signal(1);
   unitPrice = signal(35);
-  discountPercent = signal(0|10|20);
+  discountPercent = signal(0);
   isExpressShipping = signal(false);
   subtotal = computed(() => this.quantity() * this.unitPrice());
   discountAmount = computed(() => (this.discountPercent() * this.subtotal()) / 100);
@@ -48,7 +48,7 @@ export class SignalsExercice {
   resetCart(){
     this.quantity.set(1);
     this.unitPrice.set(35);
-    this.discountPercent.set(0|10|20);
+    this.discountPercent.set(0);
     this.isExpressShipping.set(false);
   }
 }

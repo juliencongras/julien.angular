@@ -6,11 +6,11 @@
     <div class="card-body space-y-4">
       <h2 class="card-title text-secondary">Résumé de la commande</h2>
 
+      <button (click)="resetCart()" class="btn">Réinitialiser</button>
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-2">
         <div class="space-y-4 bg-base-100 p-4 rounded-xl border border-base-300">
-          <div>
-            <h2 class="card-title text-secondary">1. Configuration de la commande</h2>
-          </div>
+          <h2 class="card-title text-secondary">1. Configuration de la commande</h2>
 
           <div>
             <label class="label text-s font-bold">Quantité d'articles</label>
@@ -39,21 +39,36 @@
 
         <div class="space-y-3 bg-base-100 p-4 rounded-xl border border-base-300 flex flex-col justify-between">
           <div class="space-y-2">
+            <h2 class="card-title text-primary">2. Synthèse de la commande</h2>
+
+            <label class="label text-s font-bold">Toutes les valeurs ci-dessous proviennent de computed()</label>
+
             <div class="flex justify-between text-sm">
-              <span>Prix brut :</span>
-              <span class="font-semibold">0 €</span>
+              <span>Sous-total brut :</span>
+              <span class="font-semibold">{{ subtotal() }} €</span>
             </div>
 
-            <div class="flex justify-between text-sm text-warning">
-              <span>Remise (dès 100 €) :</span>
-              <span class="font-semibold">- 0 €</span>
+            <div class="flex justify-between text-sm text-success">
+              <span>Remise ({{ discountPercent() }}%) :</span>
+              <span class="font-semibold">- {{ discountAmount() }} €</span>
             </div>
+
+            <div class="flex justify-between text-sm">
+              <span>Frais de port :</span>
+              <span class="font-semibold">{{ shippingFee() }} €</span>
+            </div>
+            @if(shippingFee() == 0){
+                <div class="badge badge-success">Frais de port offerts !</div>
+            }
+            @else{
+                <div class="badge badge-primary">Frais de port offerts dans {{ 100 - subtotal() }}€</div>
+            }
 
             <div class="divider my-1"></div>
 
             <div class="flex justify-between text-base font-bold text-primary">
-              <span>Total Final:</span>
-              <span class="text-xl">100 €</span>
+              <span>Total à payer:</span>
+              <span class="text-xl">{{ total() }} €</span>
             </div>
           </div>
         </div>
