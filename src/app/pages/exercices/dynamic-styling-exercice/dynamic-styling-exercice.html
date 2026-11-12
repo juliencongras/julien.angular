@@ -1,3 +1,35 @@
 <div class="text-center space-y-2">
     <h1 class="text-4xl font-extrabold text-primary">{{ title }}</h1>
 </div>
+
+<div [ngClass]="{ oldman: friendBob.oneFriendAge >= 30 }" class="card bg-base-100 w-96 shadow-sm">
+    <figure>
+      <img [src]="friendBob.oneFriendImgUrl" [alt]="friendBob.oneFriendName" />
+    </figure>
+    <div class="card-body">
+        <h2 class="card-title">{{ friendBob.oneFriendName }}</h2>
+        <p [ngStyle]="{ color: friendBob.oneFriendStatus === 'Offline' ? 'red' : 'green' }">Status: {{ friendBob.getOneFriendStatus() }}</p>
+        <p>Age: {{ friendBob.oneFriendAge }}</p>
+        <p>Bio: {{ friendBob.oneFriendBio }}</p>
+        <p>Réputation: {{ friendBob.getOneFriendStatus() }}</p>
+    </div>
+</div>
+
+<form class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+    <h2>Modifier les informations de {{ friendBob.oneFriendName }}</h2>
+
+  <label class="label">Nom</label>
+  <input [(ngModel)]="friendBob.oneFriendName" class="input" name="friendName" placeholder="Nom" />
+
+  <label class="label">Age</label>
+  <input [(ngModel)]="friendBob.oneFriendAge" class="input" name="friendAge" placeholder="Age" />
+
+  <label class="label">Status</label>
+  <input [(ngModel)]="friendBob.oneFriendStatus" class="input" name="friendStatus" placeholder="Status" />
+
+  <label class="label">Bio</label>
+  <textarea [(ngModel)]="friendBob.oneFriendBio" class="input" name="friendBio" id="" placeholder="Bio"></textarea>
+
+  <label class="label">Image (URL)</label>
+  <input [(ngModel)]="friendBob.oneFriendImgUrl" class="input" name="friendImgUrl" placeholder="Image (URL)" />
+</form>
