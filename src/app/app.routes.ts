@@ -70,6 +70,10 @@ export const routes: Routes = [
     path: 'exercices/list_rendering',
     loadComponent: () => import('./pages/exercices/list-rendering-exercice/list-rendering-exercice').then((m) => m.ListRenderingExercice),
   },
+  {
+    path: 'exercices/dynamic_styling',
+    loadComponent: () => import('./pages/exercices/dynamic-styling-exercice/dynamic-styling-exercice').then((m) => m.DynamicStylingExercice),
+  },
 
   //Corrections
     {
