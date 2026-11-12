@@ -35,6 +35,10 @@ export const routes: Routes = [
         path: 'lessons/conditional_rendering',
         loadComponent: () => import('./pages/lessons/conditional-rendering-lesson/conditional-rendering-lesson').then((m) => m.ConditionalRenderingLesson),
     },
+    {
+        path: 'lessons/list_rendering',
+        loadComponent: () => import('./pages/lessons/list-rendering-lesson/list-rendering-lesson').then((m) => m.ListRenderingLesson),
+    },
 
 
   //Exercices
