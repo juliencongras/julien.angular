@@ -39,6 +39,10 @@ export const routes: Routes = [
         path: 'lessons/list_rendering',
         loadComponent: () => import('./pages/lessons/list-rendering-lesson/list-rendering-lesson').then((m) => m.ListRenderingLesson),
     },
+    {
+        path: 'lessons/signals',
+        loadComponent: () => import('./pages/lessons/signals-lesson/signals-lesson').then((m) => m.SignalsLesson),
+    },
 
 
   //Exercices
