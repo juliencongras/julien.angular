@@ -1,4 +1,21 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject, signal, computed, effect } from '@angular/core';
+
+interface Digimon {
+  id: number,
+  name: string,
+  href: string,
+  image: string
+}
+
+interface DigimonResponse{
+  currentPage: number,
+  elementsOnPage: number,
+  totalElements: number,
+  totalPages: number,
+  previousPage: string,
+  nextPage: string
+}
 
 @Component({
   imports: [],
@@ -6,5 +23,23 @@ import { Component } from '@angular/core';
   templateUrl: './observables-http-exercice.html',
 })
 export class ObservablesHttpExercice {
-  title: string = "Observables (http)"
+  title: string = "Observables (http)";
+
+  httpClientInstance: HttpClient = inject(HttpClient);
+
+  digimons = signal<Digimon[]>([]);
+  isLoading = signal<Boolean>(true);
+  errorMessage = signal<string | null>(null);
+
+  ngOnInit(){
+    this.httpClientInstance.get<DigimonResponse>('[https://digi-api.com/api/v1/digimon](https://digi-api.com/api/v1/digimon)').subscribe({
+      next(value) {
+        //Put value in digimon array
+        //this.isLoading = false
+      },
+      error(err) {
+        
+      },
+    })
+  }
 }
