@@ -90,6 +90,10 @@ export const routes: Routes = [
     path: 'exercices/observables',
     loadComponent: () => import('./pages/exercices/observables-exercice/observables-exercice').then((m) => m.ObservablesExercice),
   },
+  {
+    path: 'exercices/observables_http',
+    loadComponent: () => import('./pages/exercices/observables-http-exercice/observables-http-exercice').then((m) => m.ObservablesHttpExercice),
+  },
 
   //Corrections
     {
