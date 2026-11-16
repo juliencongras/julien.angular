@@ -104,6 +104,10 @@ export const routes: Routes = [
         path: 'corrections/signals',
         loadComponent: () => import('./pages/corrections/signals-corrections/signals-exercice').then((m) => m.SignalsExercice),
     },
+    {
+        path: 'corrections/signals_form_validation',
+        loadComponent: () => import('./pages/corrections/signals-form-validation-correction/signals-form-exercice').then((m) => m.SignalsFormExercice),
+    },
 
   //! ---------- Le système page Not Found ---------------------------------------------------------------------
   // Dans Angular il faut placer à la fin le path:'**'
