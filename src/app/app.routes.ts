@@ -86,6 +86,10 @@ export const routes: Routes = [
     path: 'exercices/signals',
     loadComponent: () => import('./pages/exercices/signals-exercice/signals-exercice').then((m) => m.SignalsExercice),
   },
+  {
+    path: 'exercices/observables',
+    loadComponent: () => import('./pages/exercices/observables-exercice/observables-exercice').then((m) => m.ObservablesExercice),
+  },
 
   //Corrections
     {
