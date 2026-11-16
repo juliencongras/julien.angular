@@ -47,6 +47,10 @@ export const routes: Routes = [
         path: 'lessons/dynamic_styling',
         loadComponent: () => import('./pages/lessons/dynamic-styling-lesson/dynamic-styling-lesson').then((m) => m.DynamicStylingLesson),
     },
+        {
+        path: 'lessons/observables',
+        loadComponent: () => import('./pages/lessons/observables-lessons/observables-lesson').then((m) => m.ObservablesLesson),
+    },
 
 
   //Exercices
