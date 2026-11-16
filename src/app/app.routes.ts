@@ -100,6 +100,10 @@ export const routes: Routes = [
         path: 'corrections/conditional_rendering',
         loadComponent: () => import('./pages/corrections/conditional-rendering-correction/conditional-rendering').then((m) => m.ConditionalRendering),
     },
+    {
+        path: 'corrections/signals',
+        loadComponent: () => import('./pages/corrections/signals-corrections/signals-exercice').then((m) => m.SignalsExercice),
+    },
 
   //! ---------- Le système page Not Found ---------------------------------------------------------------------
   // Dans Angular il faut placer à la fin le path:'**'
