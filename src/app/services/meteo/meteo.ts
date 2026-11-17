@@ -1,6 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Service, inject } from '@angular/core';
 import { Observable } from 'rxjs';
+import { MeteoResponse } from '../../models/meteo.model';
 
 @Service()
 export class Meteo {
@@ -8,11 +9,9 @@ export class Meteo {
 
     api: string = "https://prevision-meteo.ch/services/json/";
 
-    /*getMeteoByCity(city: string): Observable<MeteoResponse>{
-        
-    }*/
+    api_response: MeteoResponse;
 
-    getMeteoByCity(city: string): void{
+    getMeteoByCity(city: string): Observable<MeteoResponse>{
         this.http.get<any>(this.api + city).subscribe({
           next: (response) => {
             // Exécuté en cas de succès (statut HTTP 2xx)
@@ -35,6 +34,7 @@ export class Meteo {
             console.log('Requête HTTP terminée.');
           }
         });
+        return this.api_response;
     }
 
 }

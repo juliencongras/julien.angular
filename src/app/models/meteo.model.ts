@@ -38,7 +38,7 @@ interface ForecastDay {
     icon_big: string
 }
 
-interface MeteoResponse {
+export interface MeteoResponse {
     city_info: CityInfo,
     current_condition: CurrentCondition,
     forecast_day: ForecastDay
