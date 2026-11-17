@@ -43,13 +43,17 @@ export const routes: Routes = [
         path: 'lessons/signals',
         loadComponent: () => import('./pages/lessons/signals-lesson/signals-lesson').then((m) => m.SignalsLesson),
     },
-        {
+    {
         path: 'lessons/dynamic_styling',
         loadComponent: () => import('./pages/lessons/dynamic-styling-lesson/dynamic-styling-lesson').then((m) => m.DynamicStylingLesson),
     },
-        {
+    {
         path: 'lessons/observables',
         loadComponent: () => import('./pages/lessons/observables-lessons/observables-lesson').then((m) => m.ObservablesLesson),
+    },
+    {
+        path: 'lessons/models',
+        loadComponent: () => import('./pages/lessons/models-lesson/models-lesson').then((m) => m.ModelsLesson),
     },
 
 
