@@ -128,6 +128,10 @@ export const routes: Routes = [
         path: 'corrections/observables',
         loadComponent: () => import('./pages/corrections/observables/observable-simple-exercice').then((m) => m.ObservableSimpleExercice),
     },
+    {
+        path: 'corrections/observables_advanced',
+        loadComponent: () => import('./pages/corrections/observables-advanced-correction/observables-advanced-exercice').then((m) => m.ObservablesAdvancedExercice),
+    },
 
   //! ---------- Le système page Not Found ---------------------------------------------------------------------
   // Dans Angular il faut placer à la fin le path:'**'
