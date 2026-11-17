@@ -1,3 +1,29 @@
 <div class="text-center space-y-2">
     <h1 class="text-4xl font-extrabold text-primary">{{ title }}</h1>
 </div>
+
+<div class="flex justify-center space-x-4 mb-8">
+    <button class="btn btn-success" (click)="start()">Démarrer</button>
+    <button class="btn btn-warning" (click)="pauseResume()">
+      {{ paused ? 'Reprendre' : 'Pause' }}
+    </button>
+    <button class="btn btn-error" (click)="stop()">Arrêter</button>
+</div>
+
+<div class="card bg-base-100 shadow-xl">
+    <div class="card-body p-5">
+        <h2 class="card-title text-secondary text-xl mb-3">Nombres Générés</h2>
+
+        <ul class="space-y-2">
+            @for (number of numbers; track $index) {
+                <li class="bg-base-200 p-3 rounded-lg flex justify-center text-lg font-mono">
+                    <span class="text-primary font-extrabold">{{ number }}</span>
+                </li>
+            } @empty {
+                <div class="text-center text-neutral-content opacity-70 mt-4">
+                    Aucun nombre généré pour l'instant.
+                </div>
+            }
+        </ul>
+    </div>
+</div>
