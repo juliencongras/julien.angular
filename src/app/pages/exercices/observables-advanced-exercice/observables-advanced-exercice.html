@@ -10,6 +10,8 @@
     <button class="btn btn-error" (click)="stop()">Arrêter</button>
 </div>
 
+<p>Afficher uniquemennt les nombres pairs <input [(ngModel)]="filterEven" type="checkbox" checked="checked" class="toggle" /></p>
+
 <div class="card bg-base-100 shadow-xl">
     <div class="card-body p-5">
         <h2 class="card-title text-secondary text-xl mb-3">Nombres Générés</h2>
@@ -17,7 +19,8 @@
         <ul class="space-y-2">
             @for (number of numbers; track $index) {
                 <li class="bg-base-200 p-3 rounded-lg flex justify-center text-lg font-mono">
-                    <span class="text-primary font-extrabold">{{ number }}</span>
+                    <span class="text-primary font-extrabold">{{ number.value }}</span>
+                    <span class="badge">{{ number.label }}</span>
                 </li>
             } @empty {
                 <div class="text-center text-neutral-content opacity-70 mt-4">
