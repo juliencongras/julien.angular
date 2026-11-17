@@ -94,6 +94,10 @@ export const routes: Routes = [
     path: 'exercices/observables_http',
     loadComponent: () => import('./pages/exercices/observables-http-exercice/observables-http-exercice').then((m) => m.ObservablesHttpExercice),
   },
+  {
+    path: 'exercices/observables_advanced',
+    loadComponent: () => import('./pages/exercices/observables-advanced-exercice/observables-advanced-exercice').then((m) => m.ObservablesAdvancedExercice),
+  },
 
   //Corrections
     {
