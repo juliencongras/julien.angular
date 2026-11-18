@@ -2,10 +2,11 @@
     <h1 class="text-4xl font-extrabold text-primary">{{ title }}</h1>
 </div>
 
-<div class="space-y-3 my-2">
+<div class="flex flex-wrap gap-2">
     @for (a of animals(); track a.id) {
         <app-animal-card
-          [animal]="a">
+          [animal]="a"
+          (adoptStatusChange)="handleToggleAdoptStatus($event)">
         </app-animal-card>
     }
 </div>

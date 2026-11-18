@@ -17,5 +17,12 @@ export class AnimalInput {
         { id: 5, name: 'Luna', species: 'chat', age: 6, energyLevel: 20, isAdopted: false },
         { id: 6, name: 'Oslo', species: 'chien', age: 1, energyLevel: 95, isAdopted: true },
     ]);
+
+    handleToggleAdoptStatus(animalId: number): void {
+        console.log(animalId);
+        this.animals.update((list) =>
+        list.map((a) => (a.id === animalId ? { ...a, isAdopted: !a.isAdopted } : a))
+    );
+    }
 }
 

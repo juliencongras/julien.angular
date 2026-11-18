@@ -1,11 +1,21 @@
 <div class="card bg-base-100 w-96 shadow-sm">
   <div class="card-body">
     <h2 class="card-title">{{ animal().name }}</h2>
+    @if (!animal().isAdopted) {
+        <div class="badge badge-neutral badge-outline">À adopter</div>
+    } @else {
+        <div class="badge badge-success">Adopté</div>
+    }
+    <div class="badge badge-neutral">{{ animal().species }}</div>
     <p>Age : {{ animal().age }} ans</p>
     <p>Niveau d'énergie : {{ animal().energyLevel }}%</p>
     <progress class="progress w-56" [value]="animal().energyLevel" max="100"></progress>
     <div class="card-actions justify-end">
-      <button class="btn btn-primary">Adopter</button>
+        @if (!animal().isAdopted) {
+            <button class="btn btn-neutral" (click)="toggleAdoptStatus()">Adopter</button>
+        } @else {
+            <button class="btn btn-soft" (click)="toggleAdoptStatus()">Annuler</button>
+        }
     </div>
   </div>
 </div>
