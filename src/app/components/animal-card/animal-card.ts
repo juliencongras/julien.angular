@@ -15,14 +15,13 @@ export interface Animal {
   templateUrl: './animal-card.html',
 })
 export class AnimalCard {
-    // 📥 Entrée de données (Property Binding [user]="...")
-  //user = input.required<UserProfile>();
+  animal = input.required<Animal>();
 
   // 📤 Sortie d'événement (Event Binding (statusChange)="..." )
   //statusChange = output<number>();
 
-  toggleStatus(): void {
+  //toggleStatus(): void {
     // Émission de l'ID vers le composant Parent
     //this.statusChange.emit(this.user().id);
-  }
+  //}
 }

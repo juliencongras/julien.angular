@@ -1,14 +1,12 @@
 import { Component, input, output, signal } from '@angular/core';
-import { Animal } from '../../../components/animal-card/animal-card';
-
-
+import { Animal, AnimalCard} from '../../../components/animal-card/animal-card';
 
 @Component({
-  imports: [],
+  imports: [AnimalCard],
   selector: 'app-animal-input-exercice',
   templateUrl: './animal-input-exercice.html',
 })
-export class AnimalCard {
+export class AnimalInput {
     title: string = "Refuge Interactif - Input & Output";
 
     readonly animals = signal<Animal[]>([

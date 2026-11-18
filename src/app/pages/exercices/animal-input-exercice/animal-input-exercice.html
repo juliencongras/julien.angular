@@ -1,3 +1,11 @@
 <div class="text-center space-y-2">
     <h1 class="text-4xl font-extrabold text-primary">{{ title }}</h1>
 </div>
+
+<div class="space-y-3 my-2">
+    @for (a of animals(); track a.id) {
+        <app-animal-card
+          [animal]="a">
+        </app-animal-card>
+    }
+</div>
