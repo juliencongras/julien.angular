@@ -110,6 +110,10 @@ export const routes: Routes = [
     path: 'exercices/observables_advanced',
     loadComponent: () => import('./pages/exercices/observables-advanced-exercice/observables-advanced-exercice').then((m) => m.ObservablesAdvancedExercice),
   },
+  {
+    path: 'exercices/animal_input',
+    loadComponent: () => import('./pages/exercices/animal-input-exercice/animal-input-exercice').then((m) => m.AnimalCard),
+  },
 
   //Corrections
     {
