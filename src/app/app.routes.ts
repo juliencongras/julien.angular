@@ -144,6 +144,10 @@ export const routes: Routes = [
         path: 'corrections/api_service',
         loadComponent: () => import('./pages/corrections/api-service-correction/api-service-exercice').then((m) => m.ApiServiceExercice),
     },
+    {
+        path: 'corrections/shop_cart_service',
+        loadComponent: () => import('./pages/corrections/shop-cart-service-correction/shop-cart-service-exercice').then((m) => m.ShopCartServiceExercice),
+    },
 
   //! ---------- Le système page Not Found ---------------------------------------------------------------------
   // Dans Angular il faut placer à la fin le path:'**'

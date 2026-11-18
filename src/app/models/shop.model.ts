@@ -1,15 +1,15 @@
-type ProductCategory = ('hardware' | 'formation' | 'goodies');
+export type ProductCategory = 'hardware' | 'formation' | 'goodies';
 
-interface Product{
-    id: number,
-    name: string,
-    price: string,
-    category: string,
-    stock: number,
-    icon: string
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  category: ProductCategory;
+  stock: number;
+  icon: string;
 }
 
-interface CartItem{
-    product: Product,
-    quantity: number
+export interface CartItem {
+  product: Product;
+  quantity: number;
 }
