@@ -23,7 +23,7 @@ export class AnimalCard {
     toggleAdoptStatus(): void {
         this.adoptStatusChange.emit(this.animal().id)
     }
-    changeEnergyLevel(): void {
+    changeEnergyLevel(energyAmount: number): void {
         this.energyLevelChange.emit(this.animal().id);
     }
 }

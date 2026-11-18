@@ -10,6 +10,8 @@
     <p>Age : {{ animal().age }} ans</p>
     <p>Niveau d'énergie : {{ animal().energyLevel }}%</p>
     <progress class="progress w-56" [value]="animal().energyLevel" max="100"></progress>
+    <button class="btn btn-neutral" (click)="changeEnergyLevel(-15)">Jouer</button>
+    <button class="btn btn-neutral" (click)="changeEnergyLevel(15)">Sieste</button>
     <div class="card-actions justify-end">
         @if (!animal().isAdopted) {
             <button class="btn btn-neutral" (click)="toggleAdoptStatus()">Adopter</button>

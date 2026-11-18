@@ -6,7 +6,8 @@
     @for (a of animals(); track a.id) {
         <app-animal-card
           [animal]="a"
-          (adoptStatusChange)="handleToggleAdoptStatus($event)">
+          (adoptStatusChange)="handleToggleAdoptStatus($event)"
+          (energyLevelChange)="handleChangeEnergyLevel($event)">
         </app-animal-card>
     }
 </div>

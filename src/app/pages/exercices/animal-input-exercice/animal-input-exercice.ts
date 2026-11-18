@@ -19,10 +19,14 @@ export class AnimalInput {
     ]);
 
     handleToggleAdoptStatus(animalId: number): void {
-        console.log(animalId);
+        console.log("AnimalId : ",animalId);
         this.animals.update((list) =>
-        list.map((a) => (a.id === animalId ? { ...a, isAdopted: !a.isAdopted } : a))
-    );
+            list.map((a) => (a.id === animalId ? { ...a, isAdopted: !a.isAdopted } : a))
+        );
+    }
+
+    handleChangeEnergyLevel(animalId: number): void {
+        console.log("AnimalId : ",animalId);
     }
 }
 
