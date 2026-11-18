@@ -1,4 +1,5 @@
 import { computed, Service, signal } from '@angular/core';
+import { CartItem, Product } from '../../models/shop.model';
 
 @Service()
 export class Cart {

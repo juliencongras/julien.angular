@@ -59,6 +59,10 @@ export const routes: Routes = [
         path: 'lessons/services_injection',
         loadComponent: () => import('./pages/lessons/services-injection-lesson/services-injection-lesson').then((m) => m.ServicesInjectionLesson),
     },
+    {
+        path: 'lessons/component_communication',
+        loadComponent: () => import('./pages/lessons/component-communication-lesson/component-communication-lesson').then((m) => m.ComponentCommunicationLesson),
+    },
 
 
   //Exercices
