@@ -9,9 +9,9 @@ export class Meteo {
 
     api: string = "https://prevision-meteo.ch/services/json/";
 
-    api_response: MeteoResponse;
+    //api_response: MeteoResponse;
 
-    getMeteoByCity(city: string): Observable<MeteoResponse>{
+    getMeteoByCity(city: string): void{
         this.http.get<any>(this.api + city).subscribe({
           next: (response) => {
             // Exécuté en cas de succès (statut HTTP 2xx)
@@ -34,7 +34,7 @@ export class Meteo {
             console.log('Requête HTTP terminée.');
           }
         });
-        return this.api_response;
+        //return this.api_response;
     }
 
 }

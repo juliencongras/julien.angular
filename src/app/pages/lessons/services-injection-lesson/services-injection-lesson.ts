@@ -1,4 +1,4 @@
-/*import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 import { ShikiPipe } from '../../../pipes/shiki.pipe';
 import { NotificationService } from '../../../services/notification.service';
@@ -6,7 +6,6 @@ import { NotificationService } from '../../../services/notification.service';
 @Component({
   selector: 'app-services-injection-lesson',
   imports: [AsyncPipe, ShikiPipe],
-  styleUrl: './services-injection-lesson.css',
   templateUrl: './services-injection-lesson.html',
 })
 export class ServicesInjectionLesson {
@@ -134,4 +133,3 @@ export const loggerProvider = {
     this.newMessage.set('');
   }
 }
-*/

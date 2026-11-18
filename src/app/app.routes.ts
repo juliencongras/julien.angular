@@ -55,6 +55,10 @@ export const routes: Routes = [
         path: 'lessons/models',
         loadComponent: () => import('./pages/lessons/models-lesson/models-lesson').then((m) => m.ModelsLesson),
     },
+    {
+        path: 'lessons/services_injection',
+        loadComponent: () => import('./pages/lessons/services-injection-lesson/services-injection-lesson').then((m) => m.ServicesInjectionLesson),
+    },
 
 
   //Exercices
