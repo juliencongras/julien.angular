@@ -10,8 +10,4 @@ export class TpUserData {
     userAge = signal<number>(20);
 
     readonly userDataEmitUpdate = output<TpUserModel>();
-
-    validateForm(): void {
-        
-    }
 }
