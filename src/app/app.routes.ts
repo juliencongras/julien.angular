@@ -67,6 +67,10 @@ export const routes: Routes = [
         path: 'lessons/router',
         loadComponent: () => import('./pages/lessons/router-lesson/router-lesson').then((m) => m.RouterLesson),
     },
+    {
+        path: 'lessons/environment',
+        loadComponent: () => import('./pages/lessons/environment-lesson/environments-lesson').then((m) => m.EnvironmentsLesson),
+    },
 
 
   //Exercices
