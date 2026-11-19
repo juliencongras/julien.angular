@@ -156,6 +156,10 @@ export const routes: Routes = [
         path: 'corrections/shop_cart_service',
         loadComponent: () => import('./pages/corrections/shop-cart-service-correction/shop-cart-service-exercice').then((m) => m.ShopCartServiceExercice),
     },
+    {
+        path: 'corrections/animal_input_output',
+        loadComponent: () => import('./pages/corrections/animal-input-output-correction/animal-input-output-exercice').then((m) => m.AnimalInputOutputExercice),
+    },
 
   //! ---------- Le système page Not Found ---------------------------------------------------------------------
   // Dans Angular il faut placer à la fin le path:'**'
