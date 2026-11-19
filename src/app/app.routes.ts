@@ -71,6 +71,10 @@ export const routes: Routes = [
         path: 'lessons/environment',
         loadComponent: () => import('./pages/lessons/environment-lesson/environments-lesson').then((m) => m.EnvironmentsLesson),
     },
+    {
+        path: 'lessons/firebase',
+        loadComponent: () => import('./pages/lessons/firebase-lesson/firebase-lesson').then((m) => m.FirebaseLesson),
+    },
 
 
   //Exercices
