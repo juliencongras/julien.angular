@@ -114,6 +114,10 @@ export const routes: Routes = [
     path: 'exercices/animal_input',
     loadComponent: () => import('./pages/exercices/animal-input-exercice/animal-input-exercice').then((m) => m.AnimalInput),
   },
+  {
+    path: 'exercices/component_communication',
+    loadComponent: () => import('./pages/exercices/component-communication-exercice/component-communication-exercice').then((m) => m.ComponentCommunicationExercice),
+  },
 
   //Corrections
     {
